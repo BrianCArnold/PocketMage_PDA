@@ -1,9 +1,11 @@
 #ifndef GLOBALS_H
 #define GLOBALS_H
 
-
-// LIBRARIES
 #pragma once
+
+/*
+ moved over to pocketmage.h
+// LIBRARIES
 #include <Arduino.h>
 #include <GxEPD2_BW.h>
 #include <U8g2lib.h>
@@ -24,6 +26,7 @@
 #include <freertos/task.h>
 #include <assets.h>
 #include <config.h>
+*/
 
 /* // migrated to pocketmage_eink.h
 // FONTS
