@@ -170,10 +170,19 @@ void updateEventByIndex(int indexToUpdate) {
 
 // General Functions
 String intToYYYYMMDD(int year_, int month_, int date_) {
-  String y = String(year_);
-  String m = (month_ < 10 ? "0" : "") + String(month_);
-  String d = (date_ < 10 ? "0" : "") + String(date_);
-  return y + m + d;
+  String res = "00000000";
+  res[0]+=year_/1000;
+  year_%=1000;
+  res[1]+=year_/100;
+  year_%=100;
+  res[2]+=year_/10;
+  year_%=10;
+  res[3]+=year_;
+  res[4]+=month_/10;
+  res[5]+=month_%10;
+  res[6]+=date_/10;
+  res[7]+=date_%10;
+  return res;
 }
 
 String getMonthName(int month) {
